@@ -5,8 +5,12 @@ VOTO DO ELEITOR
 #include <stdio.h>
 #include <stdlib.h>
 
-using namespace std;
-
+int multiplicacao (int p1, int p2)
+{
+    int produto;
+    produto = p1 * p2;
+    return produto;
+}
 
 int main ()
 {
