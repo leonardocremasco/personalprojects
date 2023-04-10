@@ -1,6 +1,4 @@
-/**************
-VOTO DO ELEITOR
-***************/
+// Primeiros passos em C//
 
 #include <stdio.h>
 #include <stdlib.h>
