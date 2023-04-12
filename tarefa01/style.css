@@ -1,0 +1,282 @@
+/* Estilos gerais */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --nav-bg-color: rgb(91, 214, 255);
+    --nav-text-color: white;
+    --button-bg-color: rgb(247, 59, 53);
+    --cor-01: #073A59;
+    --cor-02: #1860A7;
+    --cor-03: #84B1D9;
+    --cor-04: #593400;
+    --cor-05: #A66C1B;
+    --cor-06: white;
+    --cor-07: rgb(147, 223, 147);
+    --fonte-1: 'Roboto Slab', serif;
+}
+
+img {
+    height: 102px;
+    width: 125px;
+}
+
+body{
+    font-size: 1.5rem; /* 1.5 rem = 15px */
+    font-family: var(--fonte-1);
+    background: linear-gradient(320deg, #1b43f5, #ece814, #4de254);
+}
+
+nav {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(320deg, #1b43f5, #ecd314, #37e940);
+    color: var(--nav-text-color);
+    padding: 0 2.4rem;
+    height: 12rem;
+}
+
+main{
+    background-color: var(--cor-06);
+    max-width: 100rem;
+    text-align: center;
+    margin: auto;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem; 
+}
+
+.button {
+    padding: 1rem 1.6rem;
+    background-color: var(--button-bg-color);
+    color: var(--nav-text-color);
+    border-radius: 0.8rem;
+}
+
+/* ---HOMEPAGE--- */
+
+.titulo_h1{
+    padding-top: 1.5rem;
+    font-family: var(--fonte-1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.212);
+    text-align: center;
+}
+
+.linknoticias {
+    color: #26c018;
+}
+
+#descricao{
+    font-family: var(--fonte-1);
+    color: #303030;
+    text-align: center;
+}
+
+#p_aves{
+    font-size: large;
+    text-align: justify;
+    padding: 1.5rem;
+}
+
+.ararazul {
+    height: 500px;
+    width: 700px;
+}
+
+.tucano {
+    height: 400px;
+    width: 480px;
+}
+
+.calopsita {
+    height: 500px;
+    width: 600px;
+}
+
+.sabia {
+    height: 300px;
+    width: 400px;
+}
+
+.noticias_recentes{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-family: var(--fonte-1);
+}
+
+section#todas_as_noticias{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-around;
+}
+
+section.noticia{
+    text-align: center;
+    align-items: center;
+    width: 45rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.titulo_noticia{
+    margin-top: 2rem;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    font-family: var(--fonte-1);
+}
+
+.feito_por{
+    font-size: 1.15rem;
+    color: var(--cor-04);
+    padding-bottom: 1rem;
+    font-family: var(--fonte-1);
+}
+
+p.descricao_noticia{
+    text-align: center;
+    text-align: justify;
+    font-family: var(--fonte-1);
+}
+
+.imagem_e_descricao{
+    display: flex;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.imagem_noticia{
+    width: 15rem;
+    height: 15rem;
+    border: 2px solid var(--cor-04);
+    border-radius: 5px;
+    margin-left: 1.5rem;
+}
+
+a.link_do_feito_por{
+    color: var(--cor-04);
+    text-decoration: none;
+    font-family: var(--fonte-1);
+}
+
+a.link_do_feito_por:hover{
+    color: var(--cor-04);
+    text-decoration: underline;
+    font-family: var(--fonte-1);
+}
+
+a.link_do_titulo_noticia{
+    color: black;
+    text-decoration: none;
+    font-family: var(--fonte-1);
+}
+
+a.link_do_titulo_noticia:hover{
+    color: black;
+    text-decoration: underline;
+    font-family: var(--fonte-1);
+}
+
+/*-------CADASTRO------- */
+
+#titulo_h1_cadastro{
+    padding-top: 1.5rem;
+    font-family: var(--fonte-1);
+}
+
+form{
+    margin: auto;
+    display: block;
+    max-width: 60rem;
+    border: 1px solid var(--cor-04);
+    border-radius: 5px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: var(--fonte-1);
+}
+
+input{
+    padding: 1rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-family: var(--fonte-1);
+}
+
+label{
+    margin-top: 1rem;
+    font-family: var(--fonte-1);
+}
+
+.botao_form{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-weight: bolder;
+    font-family: var(--fonte-1);
+}
+
+.botao_form[type="reset"]{
+    background-color: #ff000080;
+}
+.botao_form[type="reset"]:hover{
+    background-color: #ff00003d;
+}
+
+.botao_form[type="submit"]{
+    background-color: #1c753aa4;
+}
+.botao_form[type="submit"]:hover{
+    background-color: #1c753a49;
+}
+
+/* -----FOOTER/RODAPÉ----- */
+a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+}
+
+a:hover {
+   backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    flex-basis: 9px;
+}
+
+footer {
+	background-color: #f2f2f2;
+	padding: 10px;
+	text-align: center;
+}
+
+.link_rodape {
+    color:#1b43f5
+}
