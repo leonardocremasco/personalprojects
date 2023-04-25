@@ -13,5 +13,19 @@ int main ()
     scanf("%d%*c", &li_numero);
     printf("\n O numero digitado foi: %d", li_numero);
 
-    // calculando o número digitado
+    // calculando o antecessor do número digitado
+
+    li_antecessor = li_numero;
+    li_antecessor--;
+
+    printf("|n O antecessor eh: %d", li_antecessor);
+
+    // calculando o sucessor do numero digitado
+
+    li_sucessor = li_numero;
+    li_sucessor++;
+
+    printf("\n O sucessor eh: %d", li_sucessor);
+
+    return 0;
 }
