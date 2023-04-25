@@ -10,16 +10,10 @@ int multiplicacao (int p1, int p2)
     return produto;
 }
 
-int resultado_1 (int produto)
-{
-    produto = produto / 5;
-    return produto;
-}
-
 int main ()
 {
     int resultado;
     resultado = multiplicacao (6,7);
-    printf("6 vezes 7 eh %d", resultado_1);
+    printf("6 vezes 7 eh %d", resultado);
     return 0;
 }
