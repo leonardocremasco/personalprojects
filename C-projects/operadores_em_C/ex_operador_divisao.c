@@ -1,7 +1,7 @@
 // operador: DIVISÃO
 
 #include <stdio.h>
-#include <limits.h>
+#include <math.h>
 
 int divisao (int p1, int p2)
 {

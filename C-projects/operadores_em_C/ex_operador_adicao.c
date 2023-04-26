@@ -1,7 +1,7 @@
 // operador: ADIÇÃO
 
 #include <stdio.h>
-#include <limits.h>
+#include <math.h>
 
 int adicao (int p1, int p2)
 {

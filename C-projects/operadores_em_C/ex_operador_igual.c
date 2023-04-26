@@ -1,7 +1,7 @@
 // operador: IGUALDADE
 
 #include <stdio.h>
-#include <limits.h>
+#include <math.h>
 
 int igualdade (int p1, int p2)
 {

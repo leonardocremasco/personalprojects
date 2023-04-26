@@ -1,7 +1,7 @@
 // operador: SUBTRAÇÃO
 
 #include <stdio.h>
-#include <limits.h>
+#include <math.h>
 
 int subtracao (int p1, int p2)
 {

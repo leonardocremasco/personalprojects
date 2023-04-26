@@ -1,7 +1,7 @@
 // operador: RESTO DA DIVISAO
 
 #include <stdio.h>
-#include <limits.h>
+#include <math.h>
 
 int resto_da_divisao (int p1, int p2)
 {
