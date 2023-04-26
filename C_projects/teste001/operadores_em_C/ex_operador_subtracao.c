@@ -1,4 +1,4 @@
-// operador: SUBTRACAO
+// operador: SUBTRAÇÃO
 
 #include <stdio.h>
 #include <limits.h>
