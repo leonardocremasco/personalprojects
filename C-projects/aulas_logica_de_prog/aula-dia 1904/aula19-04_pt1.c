@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <limits.h>
+#include <math.h>
 
 int multiplicacao (int p1, int p2)
 {
