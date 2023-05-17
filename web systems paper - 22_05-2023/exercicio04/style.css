@@ -1,0 +1,42 @@
+/* styling the code */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+
+
+:root {
+    font-family: 'Dosis', sans-serif;
+    background-color: aliceblue;
+}
+
+body {
+    text-align: center;
+    background-color: plum;
+}
+
+button {
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #c7c7c7;
+}
+
+.p1 {
+    font-size: 20px;
+    margin-top: 20px; 
+}
+
+#resultado {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+input#ano {
+    width: 200px;
+    height: 20px;
+    
+}
