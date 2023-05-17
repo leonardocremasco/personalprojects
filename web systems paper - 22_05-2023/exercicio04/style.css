@@ -13,14 +13,6 @@ body {
     background-color: plum;
 }
 
-button {
-    font-size: 20px;
-    text-align: center;
-    width: 200px;
-    height: 40px;
-    border-radius: 10px;
-}
-
 button:hover {
     background-color: #c7c7c7;
 }
@@ -35,8 +27,3 @@ button:hover {
     margin-top: 20px;
 }
 
-input#ano {
-    width: 200px;
-    height: 20px;
-    
-}
