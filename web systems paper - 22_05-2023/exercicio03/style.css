@@ -1,0 +1,56 @@
+/* CSS: adicionar minutos a uma data */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    background-color: rgb(126, 167, 114);
+}
+
+h1 {
+    text-decoration: underline;
+    padding: 10px;
+}
+
+.container {
+    border: 1px solid black;
+    margin: 0 550px;
+    border-radius: 8px;
+}
+
+label#label1 {
+    font-size: 25px;
+    margin-right: 140px;
+}
+
+label#label2{
+    font-size: 25px;
+}
+
+input#data {
+    height: 25px;
+}
+
+input#minutos {
+    margin-left: 5px;
+    height: 25px;
+}
+
+button {
+    width: 185px;
+    height: 70px;
+    font-family: 'Dosis', sans-serif; 
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: rgb(212, 243, 166);
+}
+
+p#resultado {
+    font-size: 20px;
+    text-decoration: underline;
+}
