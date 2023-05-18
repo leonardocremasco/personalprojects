@@ -1,0 +1,21 @@
+/* CSS: relogio atual */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    background-color: rgb(243, 151, 151);
+}
+
+h1 {
+    padding: 10px;
+}
+
+p {
+    font-size: 70px;
+    border: 1px solid black;
+    margin: 0 550px;
+    border-radius: 10px;
+
+}

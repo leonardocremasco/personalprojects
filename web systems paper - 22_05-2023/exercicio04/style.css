@@ -1,29 +1,25 @@
-/* styling the code */
+/* CSS: ano bissexto */
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
 
-
-:root {
-    font-family: 'Dosis', sans-serif;
-    background-color: aliceblue;
-}
-
 body {
     text-align: center;
+    font-family: 'Dosis', sans-serif;
     background-color: plum;
 }
 
-button:hover {
-    background-color: #c7c7c7;
-}
-
-.p1 {
-    font-size: 20px;
-    margin-top: 20px; 
-}
-
 #resultado {
-    font-size: 30px;
-    margin-top: 20px;
+    font-size: 20px;
 }
 
+#ano {
+    border-radius: 2px;
+}
+
+button {
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color: beige;
+}

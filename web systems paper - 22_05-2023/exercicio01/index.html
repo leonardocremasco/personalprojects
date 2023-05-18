@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diferença entre duas datas</title>
+    <link rel="stylesheet" href="style.css"> 
+    <title>Calculadora de diferença em dias</title>
 </head>
 <body>
-
-    <h1>Calculando a diferença entre duas datas (coloque a data mais atual primeiro) </h1>
-    <input type="date" name="date1" id="date1">
-    <input type="date" name="date2" id="date2">
-    <button onclick="calcular()">Calcule</button>
-
-    <div class="res">
-        <p>A diferença é de:</p>
+  <h1>Calculadora de diferença em dias</h1>
+    <div class="div-datas">
+        <label for="data1">Data 1:</label>
+        <input type="date" id="data1"><br>
+        <label for="data2">Data 2:</label>
+        <input type="date" id="data2"><br>
+        <button onclick="calcularDiferencaDatas()">Calcular</button>
     </div>
 
-    <script src="script.js"></script>
+    <div id="resultado"></div>
 
+    <script src="script.js"></script>
 </body>
 </html>

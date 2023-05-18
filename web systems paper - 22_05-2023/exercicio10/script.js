@@ -4,8 +4,8 @@ function validateForm(event) {
     event.preventDefault(); // Prevent form submission
 
     // Definindo constantes de usuário e senha
-    const USERNAME = "usuario";
-    const PASSWORD = "senha";
+    const USERNAME = "github.com/leonardocremasco";
+    const PASSWORD = "clerivaldotop";
 
     // Obtendo os valores digitados pelo usuário
     const enteredUsername = document.getElementById("username").value;

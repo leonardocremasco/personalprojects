@@ -1,0 +1,52 @@
+/* CSS: diferença em dias */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    background-color: rgb(243, 151, 151);
+}
+
+label {
+    font-size: 30px;
+}
+
+input#data1 {
+    width: 100px;
+    height: 30px;
+    margin-bottom: 5px;
+    
+}
+
+input#data2 {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+button {
+    width: 185px;
+    height: 40px;
+    font-family: 'Dosis', sans-serif; 
+    font-size: 25px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgb(212, 243, 166);
+}
+
+.div-datas {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin: 0 550px;
+}
+
+h1 {
+    margin-bottom: 50px;
+    text-decoration: underline;
+}

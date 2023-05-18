@@ -1,0 +1,50 @@
+/* CSS: formulario idade, nome e email */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+
+body {
+    font-family: 'Dosis', sans-serif;
+    background-color: rgb(156, 202, 241);
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.form-container {
+    width: 300px;
+    margin: 0 auto;
+}
+  
+.form-group {
+    margin-bottom: 10px;
+}
+  
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+.form-group input {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+}
+  
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+button {
+    width: 105%;
+    font-family: 'Dosis', sans-serif;
+}
+
+button:hover {
+    background-color: rgb(212, 243, 166);
+    text-decoration: underline;
+}
+
