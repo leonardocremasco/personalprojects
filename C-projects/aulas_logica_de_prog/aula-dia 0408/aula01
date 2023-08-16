@@ -1,0 +1,5 @@
+Declaração de Variáveis
+
+ -int -> ocupa 4 bits na memória
+ -float
+ -char -> ocupa 1 bit na memória
