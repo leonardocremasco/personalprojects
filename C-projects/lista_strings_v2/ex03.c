@@ -1,0 +1,1 @@
+// Ex03) Leia 5 nomes de até 50 caracteres  e armazene em uma matriz de strings. Depois, leia um nome ou parte dele, e pesquisar na matriz e exibir quando encontrado
