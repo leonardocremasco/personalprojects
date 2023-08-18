@@ -10,9 +10,9 @@
         "stopAtEntry": false,
         "cwd": "${workspaceFolder}",
         "environment": [],
-        "externalConsole": false, //set to true to see output in cmd instead
+        "externalConsole": true, //set to true to see output in cmd instead
         "MIMode": "gdb",
-        "miDebuggerPath": "F:\\MinGW\\bin\\gdb.exe",//Mention the path to gdb inside bin folder of Mingw
+        "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",//Mention the path to gdb inside bin folder of Mingw
         "setupCommands": [
           {
             "description": "Enable pretty-printing for gdb",
@@ -33,7 +33,7 @@
         "environment": [],
         "externalConsole": false, //set to true to see output in cmd instead
         "MIMode": "gdb",
-        "miDebuggerPath": "F:\\MinGW\\bin\\gdb.exe",//Mention the path to gdb inside bin folder of Mingw
+        "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",//Mention the path to gdb inside bin folder of Mingw
         "setupCommands": [
           {
             "description": "Enable pretty-printing for gdb",
