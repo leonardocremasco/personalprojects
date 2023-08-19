@@ -8,7 +8,7 @@ int main() {
     char frase[256];
     int vogais = 0, consoantes = 0, espacos = 0, palavras = 0;
     
-    printf("Digite uma frase (até 255 caracteres): ");
+    printf("Digite uma frase (ate 255 caracteres): ");
     fgets(frase, sizeof(frase), stdin);
     
     // Removendo o caractere de nova linha gerado pelo fgets
@@ -46,7 +46,7 @@ int main() {
     
     printf("Quantidade de vogais: %d\n", vogais);
     printf("Quantidade de consoantes: %d\n", consoantes);
-    printf("Quantidade de espaços: %d\n", espacos);
+    printf("Quantidade de espacos: %d\n", espacos);
     printf("Quantidade de palavras: %d\n", palavras);
     
     return 0;

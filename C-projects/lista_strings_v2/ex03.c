@@ -12,7 +12,7 @@ int main() {
     char searchName[MAX_NAME_LENGTH];
     
     // lendo os nomes e armazenando na matriz
-    printf("Digite os %d nomes de até %d caracteres:\n", NUM_NAMES, MAX_NAME_LENGTH);
+    printf("Digite os %d nomes de ate %d caracteres:\n", NUM_NAMES, MAX_NAME_LENGTH);
     for (int i = 0; i < NUM_NAMES; i++) {
         printf("Nome %d: ", i + 1);
         scanf("%s", names[i]);
