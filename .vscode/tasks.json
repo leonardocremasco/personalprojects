@@ -4,7 +4,7 @@
       {
         "type": "shell",
         "label": "gcc.exe build active file",
-        "command": "F:\\MinGW\\bin\\gcc.exe",//Mention directory to gcc compiler
+        "command": "C:\\MinGW\\bin\\gcc.exe",//Mention directory to gcc compiler
         "args": [
           "-g",
           "${file}",
@@ -12,13 +12,13 @@
           "${fileDirname}\\${fileBasenameNoExtension}.exe"
         ],
         "options": {
-          "cwd": "F:\\MinGW\\bin"//Mention dir to bin foler of Mingw
+          "cwd": "C:\\MinGW\\bin"//Mention dir to bin foler of Mingw
         }
       },
       {
         "type": "shell",
         "label": "gcc build & run active file",
-        "command": "F:\\MinGW\\bin\\gcc.exe",//Dir to gcc compiler
+        "command": "C:\\MinGW\\bin\\gcc.exe",//Dir to gcc compiler
         "args": [
           "${file}",
           "-o",
@@ -27,7 +27,7 @@
           "${fileDirname}\\${fileBasenameNoExtension}.exe"
         ],
         "options": {
-          "cwd": "F:\\MinGW\\bin"//Dir to Mingw's bin folder
+          "cwd": "C:\\MinGW\\bin"//Dir to Mingw's bin folder
         },
         "group": {
             "kind": "build",
