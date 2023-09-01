@@ -3,11 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
-// função para gerar um número aleatório entre um min e um max
-int GeracaoAleatoria(int min, int max) {
-    return min + rand() % (max - min + 1);
-}
+#include "GeracaoAleatoria"
 
 int main() {
     int minRange = 1;
