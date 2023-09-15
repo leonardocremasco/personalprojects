@@ -8,3 +8,4 @@ PONTEIROS
     printf("%d", *yPtr); ---> aqui o resultado da compilação será 5, que corresponde ao conteúdo do endreço o qual o ponteiro está apontando
 
 - '%p' é a forma como nos referimos a um ponteiro (endereço);
+- int ocupa 4 bytes na memória
