@@ -1,0 +1,10 @@
+PONTEIROS
+
+- o '&' é um operador de endereço, ou seja, quando colocado, ele faz com que a variável de tipo ponteiro aponte para o endereço de uma variável normal. Em suma, esse operador faz com que o conteúdo da variável de tipo ponteiro seja o endereço de memória onde está localizada essa variável normal e, consequentemente, tenha o mesmo ""valor"".
+
+- o '*' é um operador de indireção ou desreferenciação é usada para retirar a sua principal função; endereçamento e memória. Se colocado esse operador antes do nome colocado da variável ponteiro, a função a ser realizada olha para o CONTEÚDO da variável a qual a variável de tipo ponteiro está endereçando. Exemplo: 
+    int y = 5;
+    int *yPtr;
+    printf("%d", *yPtr); ---> aqui o resultado da compilação será 5, que corresponde ao conteúdo do endreço o qual o ponteiro está apontando
+
+- '%p' é a forma como nos referimos a um ponteiro (endereço);
