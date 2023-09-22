@@ -9,6 +9,7 @@ void preencherArray(int *array, int tamanho, int valor) {
     while (ptr < end) {
         *ptr = valor; 
          ptr++; 
+    }
 }
 
 int main() {

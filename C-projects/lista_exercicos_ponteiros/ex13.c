@@ -16,9 +16,11 @@ bool verificaSubstring(const char *str1, const char *str2) {
 
         if (*ptr2 == '\0') {
             return true; 
+        }
 
         ptr1 = tempPtr1 + 1; 
-
+    }
+    
     return false; 
 }
 
