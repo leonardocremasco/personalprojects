@@ -15,7 +15,7 @@ int main () {
     printf("\n%d", a);
     printf("\n%d", &a);
     printf("\n%d", p);
-    printf("\n%d", &p);
+    printf("\n%d", *p);
 
     printf("\n%d", b);
     printf("\n%d", &b);
