@@ -6,7 +6,7 @@ int main () {
 
     int i;
 
-        for (i = 1; i <=10; i++){
+    for (i = 1; i <=10; i++){
             printf("Ordem crescente, numero: %d  \n", i);
         }
     
