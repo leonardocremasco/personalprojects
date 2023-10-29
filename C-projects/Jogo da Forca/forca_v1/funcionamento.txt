@@ -1,0 +1,9 @@
+           JOGO DA FORCA
+
+1° - Para conseguirmos implementar o jogo da forca em um código em C, primeiro nós declaramos as 4 bibliotecas que nos ajudarão a fazê-lo: stdio.h(padrão do código C), string.h(para facilitar na manipulação de strings, ou seja, as palavras do jogo da forca), stdlib.h(para nos ajudar a mexer com memória dentro do código) e time.h(para facilitar a geração de números aleatórios.
+
+2° - Em seguida, usamos os dois DEFINE's para colocar um padrão de número máximod e tentativas e o número de palavras por jogo e, logo após, criamos um array de ponteiros para strings, que serão as palavras que o jogador pode advinhar (*palavras[NUM_PALAVRAS])
+
+3° - Após, criamos a função void (exibirPalavra) para fazer o jogo em si. Essa função recebe a palavra a ser adivinhada e um array de inteiros (letrasCorretas) que indica quais letras foram adivinhadas corretamente. A função exibe a palavra atual, mostrando as letras adivinhadas e espáços para letras não adivinhadas (usamos o underline (_) para indicar os espaços)
+
+4° - E por final, criamos a função principal (main) que é onde realmente o jogo acontece. Primeiros, iniciamos o gerador de números aleatórios com a função 'srand(time(NULL))'. Após isso, a palavra secreta é escolhida aleatoriamente do array 'palavras'. E assim o jogo funciona: o jogador entra em um loop onde  o mesmo pode fazer tentatvas de adivinhar as letras. Cada teantiva é processada e o progresso é exibido na tela a partir da função void (exibirPalavra) supracitada. Se o jogador adivinhar corretamente, uma mensagem de parabéns é exibida na tela. No entanto, se o jogador não adivinhar corretamente dentro do número máximo de tentativas, a palavra correta é mostrada.

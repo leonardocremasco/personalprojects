@@ -37,7 +37,7 @@ int main() {
     int tamPalavra = strlen(palavraSecreta);
     int letrasCorretas[tamPalavra];
     int tentativas = 0;
-    int acertou = 0;
+    int correto = 0;
 
     
     for (int i = 0; i < tamPalavra; i++) {
@@ -69,15 +69,15 @@ int main() {
         }
 
         // Verificar se o jogador acertou a palavra
-        acertou = 1;
+        correto = 1;
         for (int i = 0; i < tamPalavra; i++) {
             if (!letrasCorretas[i]) {
-                acertou = 0;
+                correto = 0;
                 break;
             }
         }
 
-        if (acertou) {
+        if (correto) {
             printf("\nParabéns! Você acertou a palavra: %s\n", palavraSecreta);
             break;
         }
@@ -85,7 +85,7 @@ int main() {
         printf("Tentativas restantes: %d\n", MAX_TENTATIVAS - tentativas);
     }
 
-    if (!acertou) {
+    if (!correto) {
         printf("\nFim de jogo. A palavra correta era: %s\n", palavraSecreta);
     }
 
