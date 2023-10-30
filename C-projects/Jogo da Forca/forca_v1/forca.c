@@ -11,10 +11,10 @@
 #define NUM_PALAVRAS 5
 
 char *palavras[NUM_PALAVRAS] = {
-    "PROGRAMACAO",
+    "LOGICA",
     "COMPUTADOR",
-    "LINGUAGEM",
-    "DESENVOLVIMENTO",
+    "ALGORITMOS",
+    "PARALELEPIPEDO",
     "OPENAI"
 };
 void exibirPalavra(char palavra[], int letrasCorretas[]) {
@@ -78,7 +78,7 @@ int main() {
         }
 
         if (correto) {
-            printf("\nParabéns! Você acertou a palavra: %s\n", palavraSecreta);
+            printf("\nParabens! Voce acertou a palavra: %s\n", palavraSecreta);
             break;
         }
 
