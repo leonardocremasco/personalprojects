@@ -25,7 +25,7 @@
     scanf("%f", &aluno->nota2);
 }
 
-// Função para calcular a média das notas de um aluno
+// função para calcular a média das notas de um aluno
 float calcularMedia(struct Aluno *aluno) {
     return (aluno->nota1 + aluno->nota2) / 2.0;
 }   
@@ -44,17 +44,20 @@ int main() {
     // array de structs Aluno para armazenar informações dos alunos
     struct Aluno alunos[numAlunos];
 
+    printf("------------------------------------------");
+    printf("\n   ESCOLA DE ENGENHARIA DE PIRACICABA");
+    printf("\n------------------------------------------");
     // Loop para preencher as informações de cada aluno, calcular e exibir a média e mostrar todos os dados do aluno
     for (int i = 0; i < numAlunos; ++i) {
-        printf("\nDigite as informacoes para o aluno %d:\n", i + 1);
+        printf("\nDigite as informacoes para o aluno [%d]\n", i + 1);
 
-        // Preencher as informações do aluno
+        // chamando a função que preenche as informações do aluno
         dadosAluno(&alunos[i]);
 
-        // Calcular a média das notas do aluno
+        // calculando a média das notas do aluno
         float media = calcularMedia(&alunos[i]);
 
-        // Exibir os dados do aluno
+        // exibindo os dados do aluno
         printf("\nMedia das notas do aluno %d: %.2f\n", i + 1, media);
         exibirAluno(&alunos[i]);
     }
