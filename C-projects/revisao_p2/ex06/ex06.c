@@ -10,7 +10,7 @@ struct Produto {
     float preco;
 };
 
-// Função para cadastrar um novo produto
+// cadastrar um novo produto
 void cadastrarProduto() {
     struct Produto novoProduto;
 
@@ -23,7 +23,7 @@ void cadastrarProduto() {
     printf("Digite o preco do produto: ");
     scanf("%f", &novoProduto.preco);
 
-    // Abrir o arquivo para escrita (modo "a" para adicionar ao final do arquivo)
+    //arquivo para escrita (modo "a" para adicionar ao final do arquivo)
     FILE *arquivo = fopen("produtos.txt", "a");
 
     // Verificar se o arquivo foi aberto com sucesso
