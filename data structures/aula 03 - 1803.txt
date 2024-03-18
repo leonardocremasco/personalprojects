@@ -1,0 +1,5 @@
+LISTA SIMPLESMENTE ENCADEADA
+
+-> pode ser alocado em qualquer posição
+-> aloca uma determinada quantidade de bytes para alocar a variável (dependendo seu tipo aloca uma qtd de memória)
+-> junta ao mesmo struct, alocamos também uma qtd de bytes para mostrar aonde está o próximo dado para ser processado. A quantidade de bytes aqui também fica a mercê do tipo da próxima variável.
