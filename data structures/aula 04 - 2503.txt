@@ -1,0 +1,136 @@
+
+**p_inicio = ponteiro de ponteiro. Ponteiro do ínicio da minha lista encadeada
+
+---------------------------------------------------------------------------------------------------------------
+int Inserir_inicio_LS (Tno_ls **p_inicio, int info)
+{
+    Tno_ls *no_novo;
+
+    /* Criacao do novo no - Aloca��o de memoria */
+    no_novo = (Tno_ls *) malloc(sizeof(Tno_ls));
+    no_novo -> dado = info;
+
+	if (*p_inicio==NULL)
+	{    /* insercao em lista vazia */
+	    no_novo -> prox = NULL;
+	    *p_inicio = no_novo;
+	}
+	else { /* insercao em lista nao vazia */
+	     no_novo -> prox = *p_inicio;
+	    *p_inicio = no_novo;
+	}
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------
+Explicação do Código acima: 
+
+1)como parâmetro da função, chamamos a struct onde temos o ponteiro de ponteiro **p_início, que aponta para o ponteiro que aponta para o começo da lista; e também uma variável da main que chamamos de info.
+
+2) logo após, criamos uma struct no_novo baseada na struct Tno_ls
+
+3) após, alocamos memória para esse novo nó criado (no_novo) por meio de uma memória alocada já (ponteiros), usando a função malloc; onde a variavel dado da struct Tno_ls é chamada de info aqui, jogando o valor da variável info (parâmetro da função).
+
+4) depois, há uma condicional onde verificamos se a variável ponteiro *p_inicio for nula (lista vazia). Se for verdade, então a variável prox sera apontada para null de acordo com a struct no_novo (no_novo -> prox = NULL). Acabamos essa primeira parte dizendo que o ponteiro *p_inicio tem o valor da variável de no_novo, voltando o ciclo. Então, com isso, guardamos o endereço apontado anteriormente por ini (pelo ponteiro *p_inicio), o qual apontava para o primeiro dado (agora segundo) e armazenamos em prox. Após isso, dizemos que o valor de *p_inicio(ini) será o endereço de nó novo, que agora alocou na primeira posição o primeiro elemento, assim, enfileirando os elementos.
+
+5)caso não for null, então inserimos o valor da variável prox será apontada para *p_inicio (ponteiro de Ini) de acordo com a struct no_novo(no_novo -> prox = *p_inicio). Acabamos essa primeira parte dizendo que o ponteiro *p_inicio tem o valor da variável de no_novo, voltando o ciclo.Então, com isso, guardamos o endereço apontado anteriormente por ini (pelo ponteiro *p_inicio), o qual apontava para o primeiro dado (agora segundo) e armazenamos em prox. Após isso, dizemos que o alor de *p_inicio(ini) será o endereço de nó novo, que agora alocou na primeira posição o primeiro elemento, assim, enfileirando os elementos.
+---------------------------------------------------------------------------------------------------------------
+
+int Inserir_fim_LS (Tno_ls **p_inicio, int info)
+{
+    Tno_ls *no_novo, *percorre;
+
+    /* Criacao do novo no - Aloca��o de memoria */
+    no_novo = (Tno_ls *) malloc(sizeof(Tno_ls));
+    no_novo -> dado = info;
+    no_novo -> prox = NULL;
+
+    if (*p_inicio==NULL)
+	{ /* lista vazia. */
+	    *p_inicio = no_novo;
+	}
+	else { /* lista nao vazia */
+	     percorre = *p_inicio;
+	     while (percorre->prox != NULL)
+	     {
+	         percorre = percorre -> prox;
+	     }
+	    percorre->prox = no_novo;
+	}
+	return 0;
+}
+
+---------------------------------------------------------------------------------------------------------------
+EXPLICAÇÃO DO CÓDIGO ACIMA:
+
+1)como parâmetro da função, chamamos a struct onde temos o ponteiro de ponteiro **p_início, que aponta para o ponteiro que aponta para o começo da lista; e também uma variável da main que chamamos de info.
+
+2)logo após, criamos uma struct no_novo baseada na struct Tno_ls e um ponteiro chamado *percorre.
+
+3) após, alocamos memória para esse novo nó criado (no_novo) por meio de uma memória alocada já (ponteiros), usando a função malloc; onde a variavel dado da struct Tno_ls é chamada de info aqui, jogando o valor da variável info (parâmetro da função); e onde a variável prox recebe o valor null.
+
+4) caso a lista for vazia, então ini (*p_inicio) terá o valor de no_novo, logo null.
+
+5) caso a lista não for vazia, então: falamos que a variável percorre recebe o valor de *p_inicio (Ini... logo, o primeiro dado). Usando o while, verificamos:enquanto prox estiver sendo apontada por percorre para onde não é null, então a variável percorre receberá o valor de prox que está sendo apontada por percorre. Ou seja, do próximo valor que não é nulo, assim, percorrendo a lista. Quando percorre for nulo, então prox será apontada por percorre para o valorde no_novo, que será alocado no último espaço.
+---------------------------------------------------------------------------------------------------------------
+
+int Inserir_meio_LS (Tno_ls **p_inicio, int info, int pos)
+{
+    int tam;
+    Tno_ls *no_novo, *percorre;
+
+    /* Tratamento de erros ======================================= */
+    if (pos<= 0)
+       return 1;  /*) posicao invalida para insercao */
+
+    Obter_Tamanho_LS(*p_inicio, &tam);
+    if (pos > tam+1)
+       return 2;   /* posicao invalida. Acima do tamanho da lista */
+    /* ================================================= */
+
+    /* Alocacao do novo no */
+    no_novo = (Tno_ls *)malloc(sizeof(Tno_ls));
+    no_novo -> dado = info;
+
+    /* procura pela posicao de insercao */
+    if (pos==1)
+    {   /* insercao no inicio */
+        Inserir_inicio_LS (p_inicio, info);
+    }
+    else
+    {   if (pos == tam+1)
+        {
+            Inserir_fim_LS (p_inicio, info);
+        }
+        else {
+                int pos_aux=1;
+                percorre = *p_inicio;
+                while (pos_aux != pos-1) /* parar uma posicao antes */
+                {
+                   percorre = percorre -> prox;
+                   pos_aux++;
+                }
+                no_novo -> prox = percorre -> prox;
+                percorre -> prox = no_novo;
+        }
+    }
+    return 0;
+}
+
+---------------------------------------------------------------------------------------------------------------
+EXPLICANDO O  CÓDIGO
+
+1) .... (IGUAL OS OUTROS)
+
+2) Cria a struct baseando em Tno_ls, colocando no_novo e percorre
+
+3) verificação de erros: verifica números negativos e posições maiores que o tamanho da lista: Ex.: 4 nós e quer colocar na posição 7.
+
+4) alocação de memória por malloc, e dado sendo apontado por no_novo para o valor de info.
+
+5) condicional onde se pos(posição) for igual a 1, então chamamos a função de inserir no começo. Caso a posição desejada seja igual ao tamanho da lista +1, então inserimos no fim. Caso não estará entre.
+
+6) caso nenhuma das duas supracitadas, então:
+    - criamos a variavel pos_aux(posição auxiliar), começando em 1, para nos ajudar a percorrer a lista
+    - variável percorre recebe o valor de ini
+    - enquanto o valor de pos_aux for DIFERENTE da posição desejada -1 (para parar de percorrer em uma posição antes da desejada), então o valor de percorre será o valor que prox está sendo apontada pelo próprio percorre.
+    - quando pos_aux for igual a pos-1, então, prox será apontada pela struct no_novo para o valor que prox está sendo apontada pela struct percorre. Alé disso, prox será apontada por percorre para o valor de no_novo, ous eja, alocando esse novo nó entre (no meio) da lista.;

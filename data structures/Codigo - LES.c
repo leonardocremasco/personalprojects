@@ -31,9 +31,11 @@ int Inserir_inicio_LS  (Tno_ls **p_inicio, int info);
 int Inserir_fim_LS     (Tno_ls **p_inicio, int info);
 int Inserir_meio_LS    (Tno_ls **p_inicio, int info, int pos);
 int Remover_inicio_LS  (Tno_ls **p_inicio);
+
 int Listar_LS          (Tno_ls *c_inicio);
 int Obter_pos_LS       (Tno_ls *c_inicio, int dado, int *pos);
 int Obter_Tamanho_LS   (Tno_ls *c_inicio, int *tam);
+
 int Inverte_LS         (Tno_ls **p_inicio);
 int Inverte_LS_2       (Tno_ls **p_inicio);
 
