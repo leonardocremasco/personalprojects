@@ -423,3 +423,73 @@ int Inverter_LS_2 (Tno_ls **p_inicio)
     }
     return 0;
 }
+
+// ----------------------------------------------------------------------------------------//
+//REMOÇÃO DE DADOS
+//-----------------------------------------------------------------------------------------//
+int Remover_meio_LS(Tno_ls **p_inicio, int pos)
+{
+    int tam;
+    Tno_ls *aux, *percorre;
+
+    /* Verificar se a posição é válida */
+    if (pos <= 0)
+        return 1; /* posição inválida para remoção */
+
+    Obter_Tamanho_LS(*p_inicio, &tam);
+    if (pos > tam)
+        return 2; /* posição inválida, maior que o tamanho da lista */
+
+    /* Caso especial: remoção do primeiro nó */
+    if (pos == 1) {
+        return Remover_inicio_LS(p_inicio);
+    }
+
+    /* Remoção em posição intermediária */
+    percorre = *p_inicio;
+    for (int i = 1; i < pos - 1; i++) {
+        percorre = percorre->prox;
+    }
+
+    aux = percorre->prox;
+    percorre->prox = aux->prox;
+    free(aux);
+
+    return 0;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+int Remover_fim_LS(Tno_ls **p_inicio)
+{
+    if (*p_inicio == NULL)
+    {
+        // lista vazia, sem remoções
+        return 1;
+    }
+    else if ((*p_inicio)->prox == NULL)
+    {
+        // se houver apenas um elemento na lista
+        free(*p_inicio);
+        *p_inicio = NULL;
+        return 0;
+    }
+    else
+    {
+        Tno_ls *anterior = NULL;
+        Tno_ls *atual = *p_inicio;
+
+        // Percorrer a lista até o último elemento
+        while (atual->prox != NULL)
+        {
+            anterior = atual;
+            atual = atual->prox;
+        }
+
+        // Remover o último elemento
+        anterior->prox = NULL;
+        free(atual);
+        return 0;
+    }
+}
+
