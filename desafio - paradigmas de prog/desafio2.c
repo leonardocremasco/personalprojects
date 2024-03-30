@@ -147,6 +147,9 @@ int validar_identificador(char *identificador) {
     return 1; // Identificador válido
 }
 
+// Função para analisar uma expressão
+int analisar_expressao(char *programa, int *posicao);
+
 /*------------------------------------------*/
 // função para analisar uma declaração
 /*------------------------------------------*/
@@ -180,7 +183,7 @@ int analisar_expressao(char *programa, int *posicao) {
     if (token.tipo == NUMERO || token.tipo == IDENTIFICADOR) {
         token = obter_proximo_token(programa, posicao);
         if (token.tipo == OPERADOR) {
-            if (!analisar_expressao(programa, posicao)) {
+            if (analisar_expressao(programa, posicao)) {
                 return 0; // Expressão inválida
             }
         }
@@ -197,14 +200,14 @@ int analisar_condicional(char *programa, int *posicao) {
     if (token.tipo == IF) {
         token = obter_proximo_token(programa, posicao);
         if (token.tipo == ABRE_PARENTESES) {
-            if (!analisar_expressao(programa, posicao)) {
+            if (analisar_expressao(programa, posicao)) {
                 return 0; // Expressão inválida
             }
             token = obter_proximo_token(programa, posicao);
             if (token.tipo == FECHA_PARENTESES) {
                 token = obter_proximo_token(programa, posicao);
                 if (token.tipo == ABRE_CHAVES) {
-                    if (!analisar_declaracao(programa, posicao)) {
+                    if (analisar_declaracao(programa, posicao)) {
                         return 0; // Declaração inválida
                     }
                     token = obter_proximo_token(programa, posicao);
@@ -213,7 +216,7 @@ int analisar_condicional(char *programa, int *posicao) {
                         if (token.tipo == ELSE) {
                             token = obter_proximo_token(programa, posicao);
                             if (token.tipo == ABRE_CHAVES) {
-                                if (!analisar_declaracao(programa, posicao)) {
+                                if (analisar_declaracao(programa, posicao)) {
                                     return 0; // Declaração inválida
                                 }
                                 token = obter_proximo_token(programa, posicao);
@@ -235,10 +238,17 @@ int analisar_condicional(char *programa, int *posicao) {
 /*------------------------------------------*/
 int main() {
     
-    char programa[5000]; // Assumindo que o tamanho máximo do programa é 1000 caracteres
+    char programa[5000]; // Assumindo que o tamanho máximo do programa é 5000 caracteres
     
     printf("Digite o programa:\n");
     fgets(programa, sizeof(programa), stdin);
+
+    // remove o caractere de nova linha da string lida
+    int len = strlen(programa);
+    if (len > 0 && programa[len - 1] == '\n') {
+        programa[len - 1] = '\0';
+    }   
+
 
     int posicao = 0;
     while (1) {
