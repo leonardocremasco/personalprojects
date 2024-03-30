@@ -6,7 +6,11 @@
 #include <ctype.h>
 #include <string.h>
 
+
+/* ------------------------------------------------------------------------*/
 // definindo os tokens de verificação
+/* ------------------------------------------------------------------------*/
+
 typedef enum {
     INT,
     IDENTIFIER,
@@ -27,14 +31,17 @@ typedef enum {
     ERROR
 } TokenType;
 
+/* ------------------------------------------------------------------------*/
 // struct do token para manipulação
+/* ------------------------------------------------------------------------*/
+
 typedef struct {
     TokenType type;
     char* lexeme;
 } Token;
 
 /* ------------------------------------------------------------------------*/
-// Protótipos de função
+// protótipos das funções booleanas de retorno
 /* ------------------------------------------------------------------------*/
 
 Token getNextToken(char *programa);
@@ -65,6 +72,7 @@ int main() {
 /* ------------------------------------------------------------------------*/
 
 Token getNextToken(char *programa) {
+    
     Token token;
     // Ignora espaços em branco
     while (isspace(*programa)) {
@@ -209,7 +217,10 @@ bool expressao(Token *token) {
     return false;
 }
 
+/* ------------------------------------------------------------------------*/
 // Função para verificar se é uma condição válida
+/* ------------------------------------------------------------------------*/
+
 bool condicional(Token *token) {
     if (token->type == IF) {
         *token = getNextToken(token->lexeme);
