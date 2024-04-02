@@ -103,7 +103,7 @@ int Inserir_meio_LS (Tno_ls **p_inicio, int info, int pos)
         }
         else {
                 int pos_aux=1;
-                percorre = *p_inicio;
+                percorre = *p_inicio; // ini
                 while (pos_aux != pos-1) /* parar uma posicao antes */
                 {
                    percorre = percorre -> prox;
@@ -133,4 +133,7 @@ EXPLICANDO O  CÓDIGO
     - criamos a variavel pos_aux(posição auxiliar), começando em 1, para nos ajudar a percorrer a lista
     - variável percorre recebe o valor de ini
     - enquanto o valor de pos_aux for DIFERENTE da posição desejada -1 (para parar de percorrer em uma posição antes da desejada), então o valor de percorre será o valor que prox está sendo apontada pelo próprio percorre.
-    - quando pos_aux for igual a pos-1, então, prox será apontada pela struct no_novo para o valor que prox está sendo apontada pela struct percorre. Alé disso, prox será apontada por percorre para o valor de no_novo, ous eja, alocando esse novo nó entre (no meio) da lista.;
+    - quando pos_aux for igual a pos-1, então, prox será apontada pela struct no_novo para o valor que prox está sendo apontada pela struct percorre. Além disso, prox será apontada por percorre para o valor de no_novo, ous eja, alocando esse novo nó entre (no meio) da lista.;
+ --------------------------------------------------------------------------------------------------------------
+
+ 

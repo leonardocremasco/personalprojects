@@ -59,7 +59,7 @@ bool condicional(Token *token);
 /* ------------------------------------------------------------------------*/
 
 int main()
-{
+{   
     char programa[] = "int x = 5; if (x > 0) { x = x - 1; } else { x = x + 1; }";
     Token token;
     

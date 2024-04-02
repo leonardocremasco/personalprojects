@@ -44,7 +44,7 @@ int Repete_Dado_LS     (Tno_ls *c_inicio, int info, int *resp);
 // resp = 1 - sim
 // resp = 0 - nao */
 
-/* FAZER int Remover_meio_LS    (Tno_ls **p_inicio, int pos); */
+int Remover_meio_LS (Tno_ls **p_inicio, int pos);
 /* FAZER int Remover_fim_LS     (Tno_ls **p_inicio); */
 /* FAZER int Obter_dado_LS      (Tno_ls *c_inicio, int pos, int *dado); */
 
@@ -446,7 +446,7 @@ int Remover_meio_LS(Tno_ls **p_inicio, int pos)
     }
 
     /* Remoção em posição intermediária */
-    percorre = *p_inicio;
+    percorre = *p_inicio; // percorre será o valor onde o ponteiro está apontando, mlogo, INI
     for (int i = 1; i < pos - 1; i++) {
         percorre = percorre->prox;
     }
