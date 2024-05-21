@@ -30,8 +30,53 @@ int Obter_topo             (Tno_pilha *inicio, int *dado); //
 int Verifica_vazio         (Tno_pilha *inicio, int *resp); //empty & size
 
 
-int Juntar_pilhas      (Tno_pilha **P1, Tno_pilha **P2, Tno_pilha **P3);
+int Juntar_pilhas      (Tno_pilha **P1, Tno_pilha **P2, Tno_pilha **P3){
 
+    int resp, dado;
+    Tno_pilha *P_aux;
+    // Exercicio - Juntas as duas pilhas
+    // P3 = P1 + P2, ficando a P1 sobre a P2
+    Inicializar_pilha (P3);
+    Inicializar_pilha (&P_aux);
+
+    // ========================== Transferindo da P2 para Paux
+    Verifica_vazio (*P2, &resp);
+    while (resp == 0)
+    {
+        Obter_topo (*P2, &dado);
+        Inserir_topo (&P_aux, dado);
+        Remover_topo (P2);
+        Verifica_vazio (*P2, &resp);
+    }
+    // ========================== Transferindo da Paux para P3
+    Verifica_vazio (P_aux, &resp);
+    while (resp == 0)
+    {
+        Obter_topo (P_aux, &dado);
+        Inserir_topo (P3, dado);
+        Remover_topo (&P_aux);
+        Verifica_vazio (P_aux, &resp);
+    }
+
+// ========================== Transferindo da P1 para Paux
+    Verifica_vazio (*P1, &resp);
+    while (resp == 0)
+    {
+        Obter_topo (*P1, &dado);
+        Inserir_topo (&P_aux, dado);
+        Remover_topo (P1);
+        Verifica_vazio (*P1, &resp);
+    }
+    // ========================== Transferindo da Paux para P3
+    Verifica_vazio (P_aux, &resp);
+    while (resp == 0)
+    {
+        Obter_topo (P_aux, &dado);
+        Inserir_topo (P3, dado);
+        Remover_topo (&P_aux);
+        Verifica_vazio (P_aux, &resp);
+    }
+}
 // ========================
 int Listar (Tno_pilha *P1)
 {
