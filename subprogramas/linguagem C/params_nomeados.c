@@ -5,15 +5,14 @@
 
 #include <stdio.h>
 
-// Definindo uma estrutura para simular parâmetros nomeados
+// definindo uma estrutura para simularmos parâmetros nomeados
 typedef struct {
     int comprimento;
     int *lista;
     int *soma;
 } SomadorParams;
 
-// Função SOMADOR que recebe uma estrutura SomadorParams
-void SOMADOR(SomadorParams params) {
+void SOMADOR(SomadorParams params) { // chamada do
     *(params.soma) = 0; // Inicializa a soma
 
     // Itera sobre a lista somando os elementos
@@ -27,7 +26,7 @@ int main() {
     int meu_array[] = {1, 2, 3, 4, 5};
     int minha_soma;
 
-    // Inicializa a estrutura com os parâmetros
+    // inicializando a estrutura com os parâmetros
     SomadorParams params;
     params.comprimento = meu_comprimento;
     params.lista = meu_array;
