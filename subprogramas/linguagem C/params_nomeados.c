@@ -12,7 +12,7 @@ typedef struct {
     int *soma;
 } SomadorParams;
 
-void SOMADOR(SomadorParams params) { // chamada do
+void SOMADOR(SomadorParams params) { // chamada da função
     *(params.soma) = 0; // Inicializa a soma
 
     // Itera sobre a lista somando os elementos

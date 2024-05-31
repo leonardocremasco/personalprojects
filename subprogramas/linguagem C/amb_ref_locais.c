@@ -8,6 +8,6 @@
 int somador (int array[], int array_tam)
 {
     static int soma = 0; // --> aqui é onde a variável se torna ESTÁTICA
-    
+    int var_a; // --> variável definida por padrão como stack-dinâmica
 }
     
