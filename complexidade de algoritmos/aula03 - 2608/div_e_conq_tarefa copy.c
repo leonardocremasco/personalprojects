@@ -15,8 +15,8 @@ int min_Distancia(int points[], int left, int right) {
     int mid = left + (right - left) / 2;
 
     // Rutilizera recursao para encontrar a distância mínima à esquerda e à direita do ponto médio
-    int leftMin = minDistance(points, left, mid);
-    int rightMin = minDistance(points, mid + 1, right);
+    int leftMin = min_Distancia(points, left, mid);
+    int rightMin = min_Distancia(points, mid + 1, right);
 
     // A distância mínima será a menor das distâncias calculadas
     int minDist = (leftMin < rightMin) ? leftMin : rightMin;
