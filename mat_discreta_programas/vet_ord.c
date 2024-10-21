@@ -1,3 +1,7 @@
+// Nome: Leonardo Cremasco Bernardes Boscariol
+// RA: 202310228
+// Curso: Engenharia de Computação
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
