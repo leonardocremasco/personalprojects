@@ -27,7 +27,7 @@ void read_encrypted_content(const char *filename, mpz_t encrypted) {
         perror("Erro ao abrir o arquivo");
         return;
     }
-
+    
     mpz_inp_raw(encrypted, file);
     fclose(file);
 }
