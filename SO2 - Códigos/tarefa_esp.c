@@ -2,8 +2,8 @@
 *** Programa que calcula o determinante de uma matriz 3x3 usando a Regra de Sarrus,
 *** de forma paralela, com threads.
 *** Nome dos componentes da equipe:
-*** - Nome do Aluno 1
-*** - Nome do Aluno 2
+*** - Leonardo Cremasco Bernardes Boscariol
+*** - Vitor Niels Flores Jensen
 **************************************************************************************/
 
 #include <stdio.h>
