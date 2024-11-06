@@ -10,13 +10,13 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-// Estrutura para armazenar a matriz e o resultado das diagonais
+// struct para armazenar a matriz
 typedef struct {
     int matriz[3][3];
     int resultado;
 } DadosDiagonais;
 
-// Função para calcular as diagonais principais
+// func para calcular a diagon principal
 void *calcula_diagonais_principais(void *arg) {
     DadosDiagonais *dados = (DadosDiagonais *)arg;
     dados->resultado = 
@@ -26,7 +26,7 @@ void *calcula_diagonais_principais(void *arg) {
     pthread_exit(NULL);
 }
 
-// Função para calcular as diagonais secundárias
+// func para calcular a diagon secundaria
 void *calcula_diagonais_secundarias(void *arg) {
     DadosDiagonais *dados = (DadosDiagonais *)arg;
     dados->resultado = -((dados->matriz[0][2] * dados->matriz[1][1] * dados->matriz[2][0]) +
@@ -39,8 +39,6 @@ int main() {
     pthread_t thread1, thread2;
     DadosDiagonais dadosPrincipais, dadosSecundarias;
     FILE *arquivo;
-
-    // Leitura da matriz a partir do arquivo matriz.txt
     arquivo = fopen("matriz.txt", "r");
     if (arquivo == NULL) {
         printf("--------------------------------------------------\n");
@@ -49,7 +47,7 @@ int main() {
         exit(1);
     }
 
-    // Preenche a matriz para ambas as estruturas de dados
+    // preenche a matriz
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             fscanf(arquivo, "%d", &dadosPrincipais.matriz[i][j]);
@@ -58,18 +56,18 @@ int main() {
     }
     fclose(arquivo);
 
-    // Cria as threads para calcular as diagonais principais e secundárias
+    // criação de threads para
     pthread_create(&thread1, NULL, calcula_diagonais_principais, (void *)&dadosPrincipais);
     pthread_create(&thread2, NULL, calcula_diagonais_secundarias, (void *)&dadosSecundarias);
 
-    // Aguarda as threads terminarem
+    // espera as thread terminarem
     pthread_join(thread1, NULL);
     pthread_join(thread2, NULL);
 
-    // Cálculo do determinante somando os resultados das diagonais
+    // calculo do det pelas diagonais
     int determinante = dadosPrincipais.resultado + dadosSecundarias.resultado;
 
-    // Exibição do resultado
+    // exibir resultado
     printf("--------------------------------------------------\n");
     printf("Diagonais Principais: %d\n", dadosPrincipais.resultado);
     printf("Diagonais Secundarias: %d\n", dadosSecundarias.resultado);
